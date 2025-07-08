@@ -18,6 +18,7 @@ function App() {
           localStorage.setItem('activeUser', JSON.stringify(data[0]));
           setUser(data[0]);
           console.log(data)
+            .catch(err => console.error('Failed to fetch user', err))
         });
     }
   }, []);
